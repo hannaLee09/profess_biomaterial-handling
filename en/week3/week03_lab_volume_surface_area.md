@@ -1,5 +1,7 @@
 # 🥑 Week 03: Volume & Surface Area Estimation via Numerical Integration
-**– Cubic Spline Interpolation, Simpson/Trapezoidal Integration Algorithms & 3D Visualization –**
+**– [Cubic Spline](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.CubicSpline.html) Interpolation, [Simpson](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html)/[Trapezoidal](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html) Integration Algorithms & 3D Visualization –**
+
+> 📂 **Navigate**: [← Week 02: Circularity & Sphericity](../week2/week02_lab_circularity_sphericity.md) · [Main README](../README.md) · [📝 Quiz Bank](../QUIZ_BANK.md)
 
 ---
 
@@ -11,17 +13,17 @@
 - **Specific Surface**: Higher specific surface → faster drying rate under same conditions
   - e.g., Wheat (1,316 m⁻¹) > Corn (728 m⁻¹) > Soybean (558 m⁻¹)
 
-### 1-2. Connection with Week 02 Content
-- **Week 02**: Circularity, Sphericity — **static shape indices**
+### 1-2. Connection with [Week 02](../week2/week02_lab_circularity_sphericity.md) Content
+- **[Week 02](../week2/week02_lab_circularity_sphericity.md)**: [Circularity](https://en.wikipedia.org/wiki/Shape_factor_(image_analysis_and_microscopy)), [Sphericity](https://en.wikipedia.org/wiki/Sphericity) — **static shape indices**
 - **Week 03**: Volume, Surface Area — extension to **dynamic physical quantities**
-- High sphericity (e.g., apple) → simple formulas yield accurate volume estimates
-- Low sphericity (e.g., rice grain) → requires more sophisticated numerical integration models
+- High [sphericity](../week2/week02_lab_circularity_sphericity.md#1-2-sphericity--roundness) (e.g., apple) → simple formulas yield accurate volume estimates
+- Low sphericity (e.g., rice grain) → requires more sophisticated [numerical integration](https://en.wikipedia.org/wiki/Numerical_integration) models
 
 ### 1-3. Physical Measurement Methods & Their Limitations
 | Method | Applicable Samples | Principle | Limitation |
 | --- | --- | --- | --- |
-| **Liquid Displacement** (water) | Potato, avocado, etc. | Archimedes' principle | Unsuitable for moisture-absorbing samples |
-| **Air Pycnometer** | Grains (rice, wheat, etc.) | Boyle's Law | Air compressibility & friction errors |
+| **Liquid Displacement** (water) | Potato, avocado, etc. | [Archimedes' principle](https://en.wikipedia.org/wiki/Archimedes%27_principle) | Unsuitable for moisture-absorbing samples |
+| **Air Pycnometer** | Grains (rice, wheat, etc.) | [Boyle's Law](https://en.wikipedia.org/wiki/Boyle%27s_law) | Air compressibility & friction errors |
 | **Peel Area Measurement** | Fruits | Area meter after peeling | Destructive, non-reproducible |
 
 ### [Summary: Segmental Modeling]
@@ -45,8 +47,8 @@ S = 2π ∫₀ᴸ r(x) × √(1 + (dr/dx)²) dx
 ### 2-3. Numerical Integration Comparison
 | Method | Approximation | Accuracy | SciPy Function |
 | --- | --- | --- | --- |
-| **Trapezoidal Rule** | Linear (1st order) | O(h²) | `scipy.integrate.trapezoid` |
-| **Simpson's Rule** | Parabolic (2nd order) | O(h⁴) | `scipy.integrate.simpson` |
+| **[Trapezoidal Rule](https://en.wikipedia.org/wiki/Trapezoidal_rule)** | Linear (1st order) | O(h²) | [`scipy.integrate.trapezoid`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html) |
+| **[Simpson's Rule](https://en.wikipedia.org/wiki/Simpson%27s_rule)** | Parabolic (2nd order) | O(h⁴) | [`scipy.integrate.simpson`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html) |
 
 ---
 

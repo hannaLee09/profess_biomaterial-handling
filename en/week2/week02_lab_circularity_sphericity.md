@@ -1,5 +1,7 @@
 # 🍏 Week 02: Shape Analysis Lab Using Digital Image Processing
-**– Circularity & Sphericity Computation with OpenCV, and GitHub Submission Guide –**
+**– Circularity & Sphericity Computation with [OpenCV](https://docs.opencv.org/4.x/), and GitHub Submission Guide –**
+
+> 📂 **Navigate**: [← Main README](../README.md) · [Week 03: Volume & Surface Area →](../week3/week03_lab_volume_surface_area.md) · [📝 Quiz Bank](../QUIZ_BANK.md)
 
 ---
 
@@ -17,10 +19,10 @@ Academically, "circularity" and "sphericity" are sometimes used interchangeably,
   - Highly sensitive to contour noise and surface roughness, since it depends on perimeter length
 
 ### 1-2. Sphericity & Roundness
-- **Wadell's Sphericity**: 
-  - Ratio of the surface area of a sphere with the same volume as the particle to the actual surface area
+- **[Wadell's Sphericity](https://en.wikipedia.org/wiki/Sphericity)**: 
+  - Ratio of the surface area of a sphere with the same [volume](../week3/week03_lab_volume_surface_area.md) as the particle to the actual [surface area](../week3/week03_lab_volume_surface_area.md)
   - In 2D projections, it is indirectly estimated using the **area-to-circumscribed-circle-area ratio**, or the aspect ratio of the object's rotated bounding box
-- **Roundness**:
+- **[Roundness](https://en.wikipedia.org/wiki/Roundness)**:
   - Measures edge smoothness (mean radius of curvature / maximum inscribed circle radius)
   - Quantifies edge erosion independently of particle elongation
 
@@ -42,16 +44,16 @@ Academically, "circularity" and "sphericity" are sometimes used interchangeably,
 - Smooths out specular reflections and surface texture noise from the apple surface
 - Prevents perimeter over-estimation caused by noise, which would distort circularity calculations
 
-### Step 3: Binarization (Otsu's Thresholding)
+### Step 3: Binarization ([Otsu's Thresholding](https://en.wikipedia.org/wiki/Otsu%27s_method))
 - Separates the foreground (apple) from the background
 - Automatically determines the optimal threshold via histogram analysis
 
 ### Step 4: Contour Detection & Filtering
-- Detects outer boundary coordinate arrays using `cv2.findContours`
-- Filters out small noise objects based on area (`cv2.contourArea`)
+- Detects outer boundary coordinate arrays using [`cv2.findContours`](https://docs.opencv.org/4.x/d3/dc0/group__imgproc__shape.html#gadf1ad6a0b82947fa1fe3c3d497f260e0)
+- Filters out small noise objects based on area ([`cv2.contourArea`](https://docs.opencv.org/4.x/d3/dc0/group__imgproc__shape.html#ga2c759ed9f497d4a618048a2f56dc97f1))
 
 ### Step 5: Geometric Moment-Based Feature Extraction
-- Extracts Area and Perimeter (`cv2.arcLength`)
+- Extracts Area and Perimeter ([`cv2.arcLength`](https://docs.opencv.org/4.x/d3/dc0/group__imgproc__shape.html#ga8d26f1c594aab4d24a4c6e3ca0ecfb32))
 - Can apply calibration markers (Ruler) for real-world mm conversion (PPM: Pixels Per Metric)
 
 ---
