@@ -16,6 +16,7 @@
 |------|------|------|
 | Week 01 | 오리엔테이션 및 실습 기초 환경 구축 | — |
 | Week 02 | 원형도·구형도 분석 알고리즘 | [`ko/week2/`](ko/week2/) |
+| Week 03 | 체적·표면적 수치 적분 추정 | [`ko/week3/`](ko/week3/) |
 
 ---
 
@@ -29,6 +30,7 @@ This repository is the official portfolio for the **Biomaterial Handling & Proce
 |------|-------|--------|
 | Week 01 | Orientation & Environment Setup | — |
 | Week 02 | Circularity & Sphericity Analysis | [`en/week2/`](en/week2/) |
+| Week 03 | Volume & Surface Area Estimation | [`en/week3/`](en/week3/) |
 
 ---
 
@@ -39,10 +41,12 @@ biomaterial-handling/
 ├── README.md          ← You are here (Language Selection)
 ├── ko/                ← 한국어 콘텐츠 (Korean Content)
 │   ├── README.md
-│   └── week2/
+│   ├── week2/
+│   └── week3/
 ├── en/                ← English Content
 │   ├── README.md
-│   └── week2/
+│   ├── week2/
+│   └── week3/
 └── .agents/workflows/ ← Automation workflows
 ```
 

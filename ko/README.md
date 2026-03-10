@@ -26,7 +26,15 @@
   - [`step3_shape_analysis.py`](week2/step3_shape_analysis.py): 분리된 영상의 기하 특성(둘레, 면적) 추출 및 수식 기반 형태 지표(%, Circularity) 산출 및 시각화
 - ➡️ **[해당 주차 상세 실습 튜토리얼 보기](week2/02주차_실습_원형도_구형도.md)**
 
-### [Week 03] (이후 실습 내용 지속 업데이트 예정)
+### [Week 03] 수치 적분 기반 체적 및 표면적 추정 알고리즘 구현
+아보카도 프로파일 데이터를 큐빅 스플라인(Cubic Spline)으로 보간하고, 회전체의 체적 공식(`V = π∫r²dx`)을 Simpson 및 Trapezoidal 수치 적분으로 산출합니다. 3D 시각화를 통해 추정 결과를 검증합니다.
+- **주요 학습 스크립트**:
+  - [`step1_interpolation.py`](week3/step1_interpolation.py): 아보카도 길이 방향 반지름 데이터 입력 및 큐빅 스플라인 보간, 2D 프로파일 시각화
+  - [`step2_volume.py`](week3/step2_volume.py): 회전체 체적 수치 적분 (Simpson vs. Trapezoidal), 분할 수별 수렴 분석
+  - [`step3_3d_visualization.py`](week3/step3_3d_visualization.py): Matplotlib mplot3d 기반 3D 회전체 표면 재구성, 체적·표면적 결과 표출
+- ➡️ **[해당 주차 상세 실습 튜토리얼 보기](week3/03주차_실습_체적_표면적.md)**
+
+### [Week 04] (이후 실습 내용 지속 업데이트 예정)
 - (차주 업데이트...)
 
 ---

@@ -26,7 +26,15 @@ Learn the fundamentals of digital image processing and compute key physical char
   - [`step3_shape_analysis.py`](week2/step3_shape_analysis.py): Geometric feature extraction (perimeter, area) and formula-based shape index (Circularity) computation with visualization
 - ➡️ **[View Detailed Lab Tutorial for This Week](week2/week02_lab_circularity_sphericity.md)**
 
-### [Week 03] (To be updated in upcoming weeks)
+### [Week 03] Volume & Surface Area Estimation via Numerical Integration
+Interpolate avocado profile data using Cubic Spline, then estimate the volume of revolution (`V = π∫r²dx`) via Simpson's and Trapezoidal numerical integration. Verify results through 3D visualization.
+- **Key Learning Scripts**:
+  - [`step1_interpolation.py`](week3/step1_interpolation.py): Avocado lengthwise radius data input, cubic spline interpolation, 2D profile visualization
+  - [`step2_volume.py`](week3/step2_volume.py): Volume estimation via numerical integration (Simpson vs. Trapezoidal), convergence analysis by subdivision count
+  - [`step3_3d_visualization.py`](week3/step3_3d_visualization.py): 3D surface reconstruction using Matplotlib mplot3d, volume & surface area display
+- ➡️ **[View Detailed Lab Tutorial for This Week](week3/week03_lab_volume_surface_area.md)**
+
+### [Week 04] (To be updated in upcoming weeks)
 - (Next week update...)
 
 ---
