@@ -27,11 +27,13 @@ Learn the fundamentals of digital image processing and compute key physical char
 - ➡️ **[View Detailed Lab Tutorial for This Week](week2/week02_lab_circularity_sphericity.md)**
 
 ### [Week 03] Volume & Surface Area Estimation via Numerical Integration
-Interpolate avocado profile data using Cubic Spline, then estimate the volume of revolution (`V = π∫r²dx`) via Simpson's and Trapezoidal numerical integration. Verify results through 3D visualization.
+Automatically extract the avocado profile from a reference image using OpenCV, apply cubic spline interpolation, then estimate the volume of revolution (`V = π∫r²dx`) via Simpson's and Trapezoidal numerical integration.
+- **Sample Specimen**: Hass avocado front-view reference image ([`avocado_front_view.png`](week3/images/avocado_front_view.png))
 - **Key Learning Scripts**:
-  - [`step1_interpolation.py`](week3/step1_interpolation.py): Avocado lengthwise radius data input, cubic spline interpolation, 2D profile visualization
-  - [`step2_volume.py`](week3/step2_volume.py): Volume estimation via numerical integration (Simpson vs. Trapezoidal), convergence analysis by subdivision count
-  - [`step3_3d_visualization.py`](week3/step3_3d_visualization.py): 3D surface reconstruction using Matplotlib mplot3d, volume & surface area display
+  - [`avocado_profile.py`](week3/avocado_profile.py): (**New**) Image loading → OpenCV contour detection → automatic profile data extraction
+  - [`step1_interpolation.py`](week3/step1_interpolation.py): Image-based profile extraction + cubic spline interpolation, 3-panel visualization
+  - [`step2_volume.py`](week3/step2_volume.py): Volume estimation via numerical integration (Simpson vs. Trapezoidal), convergence analysis
+  - [`step3_3d_visualization.py`](week3/step3_3d_visualization.py): Input image → 3D reconstruction → 2D profile, 3-panel visualization
 - ➡️ **[View Detailed Lab Tutorial for This Week](week3/week03_lab_volume_surface_area.md)**
 
 ### [Week 04] (To be updated in upcoming weeks)

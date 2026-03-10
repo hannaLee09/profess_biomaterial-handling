@@ -27,11 +27,13 @@
 - ➡️ **[해당 주차 상세 실습 튜토리얼 보기](week2/02주차_실습_원형도_구형도.md)**
 
 ### [Week 03] 수치 적분 기반 체적 및 표면적 추정 알고리즘 구현
-아보카도 프로파일 데이터를 큐빅 스플라인(Cubic Spline)으로 보간하고, 회전체의 체적 공식(`V = π∫r²dx`)을 Simpson 및 Trapezoidal 수치 적분으로 산출합니다. 3D 시각화를 통해 추정 결과를 검증합니다.
+아보카도 레퍼런스 이미지에서 OpenCV로 프로파일을 자동 추출하고, 큐빅 스플라인 보간 후 회전체의 체적(`V = π∫r²dx`)을 Simpson/Trapezoidal 수치 적분으로 산출합니다.
+- **실습 대상 시료**: 아보카도(Hass) 정면 뷰 레퍼런스 이미지 ([`avocado_front_view.png`](week3/images/avocado_front_view.png))
 - **주요 학습 스크립트**:
-  - [`step1_interpolation.py`](week3/step1_interpolation.py): 아보카도 길이 방향 반지름 데이터 입력 및 큐빅 스플라인 보간, 2D 프로파일 시각화
+  - [`avocado_profile.py`](week3/avocado_profile.py): (**신규**) 이미지 로드 → OpenCV 윤곽선 검출 → 프로파일 데이터 자동 추출
+  - [`step1_interpolation.py`](week3/step1_interpolation.py): 이미지 기반 프로파일 추출 + 큐빅 스플라인 보간, 3패널 시각화
   - [`step2_volume.py`](week3/step2_volume.py): 회전체 체적 수치 적분 (Simpson vs. Trapezoidal), 분할 수별 수렴 분석
-  - [`step3_3d_visualization.py`](week3/step3_3d_visualization.py): Matplotlib mplot3d 기반 3D 회전체 표면 재구성, 체적·표면적 결과 표출
+  - [`step3_3d_visualization.py`](week3/step3_3d_visualization.py): 원본 이미지 → 3D 회전체 재구성 → 2D 프로파일 3패널 시각화
 - ➡️ **[해당 주차 상세 실습 튜토리얼 보기](week3/03주차_실습_체적_표면적.md)**
 
 ### [Week 04] (이후 실습 내용 지속 업데이트 예정)

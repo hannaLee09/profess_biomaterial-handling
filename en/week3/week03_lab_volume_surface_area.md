@@ -5,6 +5,23 @@
 
 ---
 
+## 0. Sample Reference: Avocado Specimen
+
+This lab estimates the volume and surface area of the avocado specimen shown below, using lengthwise profile (radius) data and numerical integration.
+
+![Avocado front view with ruler scale](images/avocado_front_view.png)
+
+| Parameter | Value |
+|-----------|-------|
+| Variety | Hass |
+| Total Length | 10.85 cm |
+| Maximum Radius | 3.38 cm (at x = 6.5 cm) |
+| Measurement Points | 6 (x = 0, 1.0, 5.0, 6.5, 8.0, 10.85 cm) |
+
+> 📏 **Scale Reference**: The centimeter ruler in the photo provides real-world size context. Profile data is cited from textbook Example 3-3.
+
+---
+
 ## 1. Theoretical Background: Volume, Surface Area & Bio-resource Processing
 
 ### 1-1. Engineering Significance of Volume & Surface Area
