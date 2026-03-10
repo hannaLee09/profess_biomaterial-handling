@@ -18,6 +18,8 @@
 | Week 02 | 원형도·구형도 분석 알고리즘 | [`ko/week2/`](ko/week2/) |
 | Week 03 | 체적·표면적 수치 적분 추정 | [`ko/week3/`](ko/week3/) |
 
+> 📝 **[주차별 심화 토론 & 퀴즈 모음](ko/QUIZ_BANK.md)**
+
 ---
 
 ## 🇺🇸 English
@@ -31,6 +33,8 @@ This repository is the official portfolio for the **Biomaterial Handling & Proce
 | Week 01 | Orientation & Environment Setup | — |
 | Week 02 | Circularity & Sphericity Analysis | [`en/week2/`](en/week2/) |
 | Week 03 | Volume & Surface Area Estimation | [`en/week3/`](en/week3/) |
+
+> 📝 **[Discussion Topics & Quiz Bank](en/QUIZ_BANK.md)**
 
 ---
 
