@@ -45,7 +45,17 @@ Understand the concepts of **True Density, Bulk Density, and Porosity**—key ph
   - [`step3_random_packing.py`](week4/step3_random_packing.py): (**New**) A 3D simulation comparing Ordered array packing vs Random Monte-Carlo packing algorithms to empirically demonstrate the reduction in bulk density.
 - ➡️ **[View Detailed Lab Tutorial for This Week](week4/Week04_Lab_Density_Porosity.md)**
 
-### [Week 05] (To be updated in upcoming weeks)
+### [Week 05] Rheological Properties Analysis & Transport Optimization Simulation
+Investigate the trade-off relationship between viscosity friction resistance (Pressure Drop), pumping power cost, and heating energy for heat exchange during pipeline transport using the Arrhenius model and Hagen-Poiseuille equation.
+- **Sample Specimens**: Clear Apple Concentrate Juice Data
+- **Key Learning Scripts**:
+  - [`step1_viscosity_optimization.py`](week5/step1_viscosity_optimization.py): Static visualization of Newtonian fluid viscosity-temperature inverse model and finding the lowest total cost intersection.
+  - [`step2_interactive_simulation.py`](week5/step2_interactive_simulation.py): Real-time parameter (velocity, inner diameter, unit price) manipulation responding with an optimal temperature U-curve animation (Slider UI).
+  - [`step3_pipe_diameter_simulation.py`](week5/step3_pipe_diameter_simulation.py): Cross-margin derivation between pumping cost reduction vs. basic facility unit price surge upon pipe diameter expansion.
+  - [`step4_reynolds_simulation.py`](week5/step4_reynolds_simulation.py): Laminar/turbulent state transition and mixing forced vortex dynamic particle animation according to Reynolds number increase.
+- ➡️ **[View Detailed Lab Tutorial for This Week](week5/Week05_Lab_Rheology.md)**
+
+### [Week 06] (To be updated in upcoming weeks)
 - (Next week update...)
 
 ---
@@ -116,7 +126,8 @@ Update the `README.md` file in the top-level folder each week to build your port
   - `[Week 02]` Completed apple contour recognition and circularity/sphericity calculation scripts
   - `[Week 03]` Performed avocado volume/surface area estimation via numerical integration
   - `[Week 04]` Calculated density/porosity and implemented 3D virtual packing
-  - `[Week 05]` (To be updated next week)
+  - `[Week 05]` Developed a 4-step simulator for apple juice viscosity trade-offs and Reynolds flow optimization.
+  - `[Week 06]` (To be updated next week)
 
 ---
 *After completing your assignment, submit your GitHub repository URL (e.g., `https://github.com/your-username/biomaterial-handling/tree/main/en/week02`) to your TA/professor for final grading.*

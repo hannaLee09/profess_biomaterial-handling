@@ -7,6 +7,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product, combinations
+from scipy.spatial.distance import cdist  # 추가: 공간 거리 연산 모듈
 
 plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
@@ -61,26 +62,32 @@ y_centers = np.linspace(5, 25, 3)
 z_centers = np.linspace(3.75, 11.25, 2)
 X, Y, Z = np.meshgrid(x_centers, y_centers, z_centers)
 
-# --- 공극(Void) 영역 시각화 추가 ---
-from scipy.spatial.distance import cdist
-vx, vy, vz = np.meshgrid(np.linspace(1, 39, 20), 
-                         np.linspace(1, 29, 15), 
-                         np.linspace(1, 14, 8))
-void_pts = np.vstack((vx.flatten(), vy.flatten(), vz.flatten())).T
-center_pts = np.vstack((X.flatten(), Y.flatten(), Z.flatten())).T
-
-# 사과 체적이 더 크므로(약 315) 구 환산 시 반경 약 4.22cm로 설정
-R_apple = np.cbrt(315.0 * (3/(4*np.pi))) if 'volume_single_cm3' not in locals() or volume_single_cm3 is None else np.cbrt(315.0 * (3/(4*np.pi)))
-distances = cdist(void_pts, center_pts)
-is_void = np.min(distances, axis=1) > 4.2 # 하드코딩된 대략적 사과 반경
-
-# 빈 공간(공극)을 시안색(Cyan) 반투명 점으로 시각화하여 사과(Red)와 시각적 대비
-ax1.scatter(void_pts[is_void, 0], void_pts[is_void, 1], void_pts[is_void, 2], 
-            s=15, c='cyan', alpha=0.3, label='Void (공극)')
-
 # 사과는 붉은색 톤으로 시각화
 ax1.scatter(X, Y, Z, s=800, c='#FF5252', alpha=1.0, edgecolors='#B71C1C', label='Apple')
-ax1.set_title('Advanced: 사과 3D 가상 패킹 (24개)', fontsize=14, pad=15)
+
+# [NEW] 공극(Void)의 직관적 시각화: 수많은 미세 점(Point Cloud)을 생성하여 빈 공간 채우기
+res = 1.5
+vx, vy, vz = np.meshgrid(np.arange(0, 40, res), np.arange(0, 30, res), np.arange(0, 15, res))
+pts = np.vstack([vx.flatten(), vy.flatten(), vz.flatten()]).T
+centers = np.vstack([X.flatten(), Y.flatten(), Z.flatten()]).T
+
+distances = cdist(pts, centers)
+min_distances = np.min(distances, axis=1)
+
+# 사과의 가상 반지름(아보카도보다 크다고 가정, 약 4.2cm)보다 멀리 있는 점들을 '빈 공간(Void)'으로 간주
+void_mask = min_distances > 4.2
+void_pts = pts[void_mask]
+
+# 계산 부하를 줄이기 위해 식별된 공극 점들 중 80%만 무작위 샘플링
+sub_sample_size = int(len(void_pts) * 0.8)
+if sub_sample_size > 0:
+    idx = np.random.choice(len(void_pts), sub_sample_size, replace=False)
+    v_pts_sub = void_pts[idx]
+    # 사과(Red)와 대비되도록 공극은 시안색(Cyan) 반투명 큐브 마커로 거친 유체처럼 표현
+    ax1.scatter(v_pts_sub[:,0], v_pts_sub[:,1], v_pts_sub[:,2], 
+                s=20, c='#00BCD4', alpha=0.2, marker='s', edgecolors='none', label='Void (공극)')
+
+ax1.set_title('Advanced: 사과 3D 가상 패킹 및 공극', fontsize=14, pad=15)
 ax1.set_box_aspect((40, 30, 15))
 ax1.legend(loc='upper right', fontsize=10)
 

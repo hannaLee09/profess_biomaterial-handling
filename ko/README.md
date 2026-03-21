@@ -45,7 +45,17 @@
   - [`step3_random_packing.py`](week4/step3_random_packing.py): (**신규**) 배열 적재(Ordered)와 무작위 적재(Random) 알고리즘 비교를 통해 산물 밀도 저하 원인을 확인하는 3D 시뮬레이션.
 - ➡️ **[해당 주차 상세 실습 튜토리얼 보기](week4/04주차_실습_밀도_공극률.md)**
 
-### [Week 05] (이후 실습 내용 지속 업데이트 예정)
+### [Week 05] 유변학적 특성 분석 및 이송 공정 최적화 시뮬레이션
+파이프라인 이송 중 발생하는 마찰 점성 저항(Pressure Drop)과 펌프 동력 비용, 그리고 열교환을 위한 가열 에너지 간의 트레이드오프 관계를 아레니우스 모델 및 하겐-푸아죄유 방정식으로 규명합니다.
+- **실습 대상 시료**: 맑은 사과 농축액 (사과즙) 데이터
+- **주요 학습 스크립트**:
+  - [`step1_viscosity_optimization.py`](week5/step1_viscosity_optimization.py): 뉴턴 유체 점도-온도 반비례 모델 정적 시각화 및 최저 총비용 교차점 도출
+  - [`step2_interactive_simulation.py`](week5/step2_interactive_simulation.py): 파라미터(유속, 내경, 단가) 실시간 조작에 반응하는 최적 온도 U-커브 애니메이션 (Slider UI)
+  - [`step3_pipe_diameter_simulation.py`](week5/step3_pipe_diameter_simulation.py): 파이프 직경 확대에 따른 펌핑 비용 하락 vs 기본 설비 단가 급증 교차 마진 도출
+  - [`step4_reynolds_simulation.py`](week5/step4_reynolds_simulation.py): 레이놀즈 수 상승에 따른 층류/난류 상태 전이 및 믹싱 강제 와류 동적 파티클 애니메이션
+- ➡️ **[해당 주차 상세 실습 튜토리얼 보기](week5/05주차_실습_유변학적특성.md)**
+
+### [Week 06] (이후 실습 내용 지속 업데이트 예정)
 - (차주 업데이트...)
 
 ---
@@ -116,7 +126,8 @@
   - `[Week 02]` 사과 윤곽선 인식 및 원형도/구형도 산출 스크립트 개발 완료
   - `[Week 03]` 수치 적분 기반 아보카도 체적/표면적 추정 실습 진행
   - `[Week 04]` 농산물 밀도/공극률 산출 및 3D 가상 패킹 구현
-  - `[Week 05]` (차주 진행 시 업데이트)
+  - `[Week 05]` 사과즙 점도 트레이드오프 및 레이놀즈 유동 최적화 4단계 시뮬레이터 개발
+  - `[Week 06]` (차주 진행 시 업데이트)
 
 ---
 *과제 제출 완료 후, 본인의 GitHub 저장소 URL(예: `https://github.com/아이디/biomaterial-handling/tree/main/ko/week02`)을 조교/교수에게 제출하여 최종 성적에 반영합니다.*

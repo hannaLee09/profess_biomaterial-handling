@@ -8,6 +8,7 @@
 - [Week 02: Circularity & Sphericity](#week-02-circularity--sphericity)
 - [Week 03: Volume & Surface Area Estimation](#week-03-volume--surface-area-estimation)
 - [Week 04: Density & Porosity Measurement and Visualization](#week-04-density--porosity-measurement-and-visualization)
+- [Week 05: Rheological Properties (Newtonian Fluids)](#week-05-rheological-properties-newtonian-fluids)
 
 ---
 
@@ -298,6 +299,109 @@ Assuming density and porosity are paramount to harvest storage stability, what i
 <summary>View Answer</summary>
 
 **Answer: Accelerated Spoilage resulting from Respiration Heat Accumulation due to Insufficient Aeration** — When void spaces (porosity) are drastically minimized, cooling airflow cannot penetrate. Heat and metabolic moisture exuded by the living produce accumulate exponentially, sharply escalating internal temperatures and catalyzing rapid microbial rotting.
+</details>
+
+---
+
+# Week 05: Rheological Properties (Newtonian Fluids)
+> 🔗 [View Detailed Lab Tutorial](week5/Week05_Lab_Rheology.md)
+
+## 💡 Discussion Topics
+
+### Discussion 1: Analyzing the Trade-off Between Viscosity and Economics
+**Background**: The Week 5 simulation confirms an intersecting tradeoff chart where escalating temperatures steadily curtail motor pumping expenses while triggering an alarming proportional spike in boiler heating fees.
+> **Prompt**: Beyond merely tallying operational financial constraints, how must process engineers fuse these energy cost models with biological restrictions like 'Nutritional Integrity Loss' or 'Thermal Degradation' dynamics when forcibly preheating agricultural fluids?
+
+### Discussion 2: Optimizing Pipe Diameter Design using the Hagen-Poiseuille Equation
+**Background**: Within the Hagen-Poiseuille mandate determining pipe pressure drop (ΔP), the pipe diameter (D) engages in an inverse square proportionality mapping against pressure attrition.
+> **Prompt**: Technically, laying mammoth super-caliber pipes across a factory would drastically eradicate sheer friction losses and save vast pumping costs. Logically speaking, why do real-world system engineers stubbornly cap pipeline expansion and instead resort to installing intermediate booster pumps?
+
+### Discussion 3: The Impact of Reynolds Number on Heat Exchange Efficiency
+**Background**: Viscous fluids naturally default to Laminar flow orientations inside heat exchanger (e.g., sterilization) pipelines. Propelling extreme velocities or debilitating viscosity thresholds triggers a shift towards turbulent kinetic chaos.
+> **Prompt**: When injecting milk or fruit juice through a High-Temperature Short-Time (HTST) pasteurizer, laminar states offer unequivocally cheaper electrical bills due to fewer friction taxes. Yet developmentally, why does facility architecture intentionally sabotage this energy margin to aggressively enforce 'Turbulent' fluid motion?
+
+---
+
+## 📝 Quiz Questions
+
+### Q1. [Theory] Comprehending Newtonian Fluid Viscosity Characteristics
+A facility operator turns up the shear rate (pump impeller RPM) to accelerate milk propulsion through a process line. According to Newtonian mechanics, how does the absolute viscosity of the milk react to this artificially surged pipe thrust rate?
+
+| Option | Content |
+| --- | --- |
+| A | Viscosity rises linearly commensurate with the velocity. |
+| B | Viscosity thins out in an inverse proportion to the speed. |
+| **C** | **Viscosity remains obstinately constant regardless of velocity or shear rate fluctuations.** |
+| D | Viscosity forms an irregular oscillatory wave function. |
+
+<details>
+<summary>View Answer</summary>
+
+**Answer: C** — For Newtonian fluids, viscosity is constant and independent of shear rate or velocity. The shear stress simply increases proportionally.
+</details>
+
+### Q2. [Theory] Unit Proportionality of Shear Stress and Shear Rate
+In Newton's Law of Viscosity formula ($\tau = \mu \dot{\gamma}$), where the absolute viscosity coefficient ($\mu$) resolves as the linear trajectory slope, what is the globally recognized metric unit representing the Shear Rate ($\dot{\gamma}$)?
+
+| Option | Content |
+| --- | --- |
+| A | $m/s$ |
+| **B** | **$s^{-1}$ (Reciprocal seconds)** |
+| C | $Pa$ (Pascals) |
+| D | $Stokes$ |
+
+<details>
+<summary>View Answer</summary>
+
+**Answer: B** — Shear rate measures velocity gradient across fluid layers (velocity over distance squared), thus cancelling distance dimensions and resolving purely to reciprocal seconds.
+</details>
+
+### Q3. [Python Function] Arrhenius Model Viscosity Exponential Transformation
+To universally implement the Arrhenius equation matrix $\mu = \mu_0 \cdot e^{(E_a / RT)}$ rapidly across a Python array dataset, what is the universally deployed Numpy library engine module?
+
+| Option | Content |
+| --- | --- |
+| **A** | **`np.exp()`** |
+| B | `np.linalg.inv()` |
+| C | `np.log10()` |
+| D | `np.gradient()` |
+
+<details>
+<summary>View Answer</summary>
+
+**Answer: A** — `np.exp()` inherently calculates the exponential power `e^x` via rapid vectorized broadcasting across the entire mathematical array directly.
+</details>
+
+### Q4. [Theory] Reynolds Number Decoding and Kinematic Flow Comprehension
+A mechanical audit of a circular pipe perimeter revealed a calculated Reynolds Number (Re) output of $1,500$. Based on fluid dynamics protocols, how can you define the ruling behavioral mechanism occurring inside the conduit?
+
+| Option | Content |
+| --- | --- |
+| **A** | **The Laminar zone where dominant viscous forces actively suppress erratic inertial motions.** |
+| B | The chaotic Transition zone denoting a violent clash between laminar and turbulent states. |
+| C | The Turbulent zone where supreme inertial vectors generate overwhelming velocity vortices. |
+| D | Undetectable zero-gravity state. |
+
+<details>
+<summary>View Answer</summary>
+
+**Answer: A** — For internal flow within circular pipes, a Reynolds number (Re) falling below the threshold of ~2100 conventionally designates a stable, laminar flow profile dictating friction loss estimation.
+</details>
+
+### Q5. [Python Function] Extracting the Lowest Cost Data Index Array
+Having processed total operational bills from 10 to 80 degrees within the `cost_total_array` variable, which dedicated Numpy operative specifically targets and retrieves only the exact coordinate index corresponding to the lowest recorded (most economical) numeric plateau?
+
+| Option | Content |
+| --- | --- |
+| A | `np.minimum()` |
+| **B** | **`np.argmin()`** |
+| C | `np.sort()` |
+| D | `np.where()` |
+
+<details>
+<summary>View Answer</summary>
+
+**Answer: B** — `np.argmin()` specifically returns the localized positional index corresponding strictly to the smallest value array element. This isolates the mapping matrix back to the absolute 'Optimal Temperature'.
 </details>
 
 ---

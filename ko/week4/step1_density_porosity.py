@@ -12,6 +12,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product, combinations
+from scipy.spatial.distance import cdist  # 추가: 공간 거리 연산 모듈
 
 # 한글 폰트 설정 (Windows 환경)
 plt.rcParams['font.family'] = 'Malgun Gothic'
@@ -101,12 +102,6 @@ y_centers = np.linspace(5, 25, 3)
 z_centers = np.linspace(2.5, 12.5, 3)
 X, Y, Z = np.meshgrid(x_centers, y_centers, z_centers)
 
-# --- 공극(Void) 영역 시각화 추가 ---
-from scipy.spatial.distance import cdist
-# 빈 공간을 채울 미세 격자 생성
-vx, vy, vz = np.meshgrid(np.linspace(1, 39, 20), 
-                         np.linspace(1, 29, 15), 
-                         np.linspace(1, 14, 8))
 void_pts = np.vstack((vx.flatten(), vy.flatten(), vz.flatten())).T
 center_pts = np.vstack((X.flatten(), Y.flatten(), Z.flatten())).T
 
